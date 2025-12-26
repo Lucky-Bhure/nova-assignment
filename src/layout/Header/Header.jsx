@@ -3,9 +3,10 @@ import { ChevronDown } from "lucide-react";
 const Header = () => {
   const path = window.location.pathname;
 
+
   return (
-    <header className="w-full h-20 flex flex-row justify-between items-center bg-white px-56 z-50">
-      <h1 className="font-bold text-xl text-[#6D4C71]">nova</h1>
+    <header className="realtive w-full h-20 flex flex-row justify-between items-center bg-white px-56 z-50">
+      <h1 className="font-bold text-xl text-[#6D4C71] cursor-pointer" onClick={() => window.location.href = '/'}>nova</h1>
 
       <nav className="flex flex-row gap-8 text-[#6D4C71]">
         
@@ -33,6 +34,8 @@ const Header = () => {
           ) : null
         }
       </div>
+
+      <button onClick={() => window.location.href = '/about'} className=" absolute w-fit bg-[#fff700] rounded-2xl py-2 px-4 end-10">About</button>
     </header>
   );
 };
