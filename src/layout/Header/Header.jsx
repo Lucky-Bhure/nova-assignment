@@ -1,12 +1,14 @@
 import { ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const path = window.location.pathname;
+  const navigate = useNavigate()
 
 
   return (
     <header className="realtive w-full h-20 flex flex-row justify-between items-center bg-white px-56 z-50 fixed top-0">
-      <h1 className="font-bold text-xl text-[#6D4C71] cursor-pointer" onClick={() => window.location.href = '/'}>nova</h1>
+      <h1 className="font-bold text-xl text-[#6D4C71] cursor-pointer" onClick={() => navigate('/')}>nova</h1>
 
       <nav className="flex flex-row gap-8 text-[#6D4C71]">
         
@@ -35,7 +37,7 @@ const Header = () => {
         }
       </div>
 
-      <button onClick={() => window.location.href = '/about'} className=" absolute w-fit bg-[#fff700] rounded-2xl py-2 px-4 end-10">About</button>
+      <button onClick={() => navigate('/about')} className=" absolute w-fit bg-[#fff700] rounded-2xl py-2 px-4 end-10">About</button>
     </header>
   );
 };
