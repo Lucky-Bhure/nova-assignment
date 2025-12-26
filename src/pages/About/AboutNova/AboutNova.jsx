@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutNova = () => {
   return (
-    <section className="w-full h-fit flex flex-col justify-between items-center bg-[#ffffff3e] py-14 gap-4 border">
+    <section className="w-full h-fit flex flex-col justify-between items-center bg-[#ffffff3e] py-14 gap-4 border mt-14">
       <div className="w-[70%] flex flex-row justify-between items-center">
         <p className="w-[30%] text-[48px] font-500 text-[#6D4C71] text-start">
           About Nova

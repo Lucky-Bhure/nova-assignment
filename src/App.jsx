@@ -3,30 +3,20 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import AppLayout from "./layout/AppLayout";
-import Header from "./layout/Header/Header";
-import Footer from "./layout/Footer/Footer";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/about",
-      element: <About />,
+      element: <AppLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> },
+      ],
     },
   ]);
 
-  return (
-    <>
-      <Header />
-      <RouterProvider router={router}>
-        <AppLayout />
-      </RouterProvider>
-      <Footer/>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

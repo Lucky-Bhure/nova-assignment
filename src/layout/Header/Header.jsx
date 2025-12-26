@@ -5,7 +5,7 @@ const Header = () => {
 
 
   return (
-    <header className="realtive w-full h-20 flex flex-row justify-between items-center bg-white px-56 z-50">
+    <header className="realtive w-full h-20 flex flex-row justify-between items-center bg-white px-56 z-50 fixed top-0">
       <h1 className="font-bold text-xl text-[#6D4C71] cursor-pointer" onClick={() => window.location.href = '/'}>nova</h1>
 
       <nav className="flex flex-row gap-8 text-[#6D4C71]">
